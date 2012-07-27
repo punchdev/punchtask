@@ -10,6 +10,7 @@
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -69,28 +70,56 @@ mixpanel.track_links('#sliding_share a', 'Referral');
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Get punchTask, and simplify your life in 30 seconds. </h1>
-        <p>You work hard, we get it. Stop using complicated todo apps and start living your life: with punchTask you get what you need, when you need. Not more, not less: just enough. </p>
-        <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
+<!-- LIGHT -->
+      
+      <div class="row">
+        <div class="span12">
+          <h1>Pricing</h1>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        
 
-<div>
-<div class="controls">
-              <div class="input-append">
-<input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="field text medium" value="email@example.com" maxlength="255" size="16" tabindex="1" /> 
-<input id="download" class="btn btn-primary " type="submit" value="Sign up now &raquo;" />
-              </div>
-            </div>
-</div>
-<div>
+        <div class="span2 well pricehover">
+          <div class="price"><h2>Solo</h2></div>
+          <ul class="unstyled pricing animated fadeIn ">
+            <li>Pay Yearly</li>
+            <li>1TB Bandwith</li>
+            <li>1 Gig of Space</li>
+            <li>Email support</li>
+          </ul>
+          <h3>$94.95</h3>
+          <button class="btn btn-success" href="#">Subscribe</button>
+        </div>
 
- </div>
+        <div class="span2 well pricehover featured">
+          <div class="price featuredprice"><h2>Studio</h2></div>
+          <ul class="unstyled pricing animated fadeIn ">
+            <li>Pay Yearly</li>
+            <li>1TB Bandwith</li>
+            <li>1 Gig of Space</li>
+            <li>Email support</li>
+          </ul>
+          <h3>$124.95</h3>
+          <button class="btn btn-success" href="#">Subscribe</button>
+        </div>
 
-<li class="hide">
-<label for="comment">Do Not Fill This Out</label>
-<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="DkAo+0ua14FoOpKSj43aX4UUgirszc9Yyw1HOWuab1g=" />
-</form> 
+        <div class="span2 well pricehover">
+          <div class="price"><h2>Agency</h2></div>
+          <ul class="unstyled pricing animated fadeIn">
+            <li>Pay Yearly</li>
+            <li>1TB Bandwith</li>
+            <li>1 Gig of Space</li>
+            <li>Email support</li>
+          </ul>
+          <h3>$184.95</h3>
+          <button class="btn btn-success" href="#">Subscribe</button>
+        </div>
+
+      </div>
+        
       </div>
 
       <div id="modal">
@@ -98,23 +127,6 @@ action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
                                 <script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
                         </div>
 
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>Available everywhere!</h2>
-          <p>With most task management software out there, you are stuck using their app on one platform and that's most certainly not how the world works! With punchTask, how you add tasks is up to you!</p>
-        </div>
-        <div class="span4">
-          <h2>Simple, yet powerful</h2>
-          <p>Making simple software is a personal goal at punchDev, but one thing is sure: simple doesn't mean dumb. Task management should be easy to use, simple to read, yet powerful enough to be there when you need it. </p>
-       </div>
-        <div class="span4">
-          <h2>Get things done, at your pace!</h2>
-          <p>punchTask never messes around with your routine; wake up in the morning, check your email, check your phone, and never worry: punchTask is right there with you via web, text, and email. </p>
-        </div>
-      </div>
-
-      <hr>
 
       <footer>
       <p>
@@ -165,8 +177,20 @@ action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
 <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=2.0.6"></script>
 <script type="text/javascript" src="assets/js/jquery-apper.js"></script>
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#download').click(function(e) { // Button which will activate our modal
+			   	$('#modal').reveal({ // The item which will be opened with reveal
+				  	animation: 'fade',                   // fade, fadeAndPop, none
+					animationspeed: 600,                       // how fast animtions are
+					closeonbackgroundclick: true,              // if you click background will modal close?
+					dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+				});
+			return false;
+			});
+		});
+	</script>
 <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
-
   </body>
 </html>
