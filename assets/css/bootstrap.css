@@ -4942,3 +4942,36 @@ button.close {
     overflow: visible !important;
   }
 }
+/*------ Sliding share ------*/
+#sliding_share {
+	width: 105px;
+	height: 281px;
+	position: absolute;
+	top: 25%;
+	left: -70px;
+	background: url(images/sliding_share.png) no-repeat;
+}
+#sliding_share .button {
+	width: 35px;
+	height: 60px;
+	float: right;
+	margin: 110px 0 0 0;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+#sliding_share .container {
+	width: 70px;
+	height: 280px;
+	float: left;
+}
+#sliding_share .container ul {
+	margin: 15px 0 0 19px;
+	padding: 0;
+	list-style-type: none;
+}
+#sliding_share .container ul li {
+	width: 32px;
+	height: 33px;
+	float: left;
+	margin: 0 0 10px 0;
+}
