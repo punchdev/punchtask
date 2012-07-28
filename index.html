@@ -41,7 +41,7 @@ mixpanel.init("e6038869f66dc117b20937fff231a676");</script><!-- end Mixpanel -->
   <body>
 <script>
 mixpanel.track("Acquisition");
-mixpanel.track_links('#download input', 'Activation');
+mixpanel.track_forms('#form1', 'Activation');
 mixpanel.track_links('#sliding_share a', 'Referral');
 </script>    
 
@@ -53,10 +53,10 @@ mixpanel.track_links('#sliding_share a', 'Referral');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">punchTask</a>
+          <a class="brand" href="/">punchTask</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="/">Home</a></li>
               <li><a href="http://labs.punchdev.com/?p=4">About</a></li>
               <li><a href="mailto:georges@punchdev.com">Contact</a></li>
               <li><a href="http://labs.punchdev.com/">Blog</a></li>
@@ -72,26 +72,21 @@ mixpanel.track_links('#sliding_share a', 'Referral');
       <div class="hero-unit">
         <h1>Get punchTask, and simplify your life in 30 seconds. </h1>
         <p>You work hard, we get it. Stop using complicated todo apps and start living your life: with punchTask you get what you need, when you need. Not more, not less: just enough. </p>
-        <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
 
-<div>
-<div class="controls">
+        <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
+          <div>
+            <div class="controls">
               <div class="input-append">
-<input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="field text medium" value="email@example.com" maxlength="255" size="16" tabindex="1" /> 
-<input id="download" class="btn btn-primary " type="submit" value="Sign up now &raquo;" />
+                <input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="field text medium" value="email@example.com" maxlength="255" size="16" tabindex="1" /> 
+                <input class="btn btn-primary" type="submit" value="Sign up now &raquo;" />
               </div>
             </div>
-</div>
-<div>
-
- </div>
-
-<li class="hide">
-<label for="comment">Do Not Fill This Out</label>
-<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="DkAo+0ua14FoOpKSj43aX4UUgirszc9Yyw1HOWuab1g=" />
-</form> 
+          </div>
+          <li class="hide">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input type="hidden" id="idstamp" name="idstamp" value="DkAo+0ua14FoOpKSj43aX4UUgirszc9Yyw1HOWuab1g=" />
+        </form> 
       </div>
 
       <div id="modal">
