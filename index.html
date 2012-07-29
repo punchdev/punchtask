@@ -71,13 +71,13 @@ mixpanel.track_links('#sliding_share a', 'Referral');
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Get punchTask, and simplify your life in 30 seconds. </h1>
-        <p>You work hard, we get it. Stop using complicated todo apps and start living your life: with punchTask you get what you need, when you need. Not more, not less: just enough. </p>
+        <p>You work hard, we get it. Stop using complicated todo apps and start living your life: with punchTask you get what you need, when you need it.</p>
 
         <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
           <div>
             <div class="controls">
               <div class="input-append">
-                <input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="field text medium" value="email@example.com" maxlength="255" size="16" tabindex="1" /> 
+                <input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="field text medium" placeholder="email@example.com" maxlength="255" size="16" tabindex="1" /> 
                 <input class="btn btn-primary" type="submit" value="Sign up now &raquo;" />
               </div>
             </div>
@@ -151,9 +151,33 @@ mixpanel.track_links('#sliding_share a', 'Referral');
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/jquery-apper.js"></script>
-
-<script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+    <script src="assets/js/mailcheck.min.js"></script>
+    
+    <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
+
+    <script>
+      var domains = ['yahoo.com','google.com','hotmail.com','gmail.com','me.com','aol.com','mac.com','live.com','comcast.net','googlemail.com','msn.com','hotmail.co.uk','yahoo.co.uk','facebook.com','verizon.net','sbcglobal.net','att.net','gmx.com','mail.com'];
+      var topLevelDomains = ['co.uk','com','net','org','info','edu','gov','mil'];
+
+var superStringDistance = function(string1, string2) {
+  // a string distance algorithm of your choosing
+}
+
+$('#appendedInputButton').on('blur', function() {
+  $(this).mailcheck({
+    domains: domains,                       // optional
+    topLevelDomains: topLevelDomains,       // optional
+    distanceFunction: superStringDistance,  // optional
+    suggested: function(element, suggestion) {
+      // callback code
+    },
+    empty: function(element) {
+      // callback code
+    }
+  });
+});
+</script>
 
   </body>
 </html>
