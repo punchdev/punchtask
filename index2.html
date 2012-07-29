@@ -1,23 +1,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>punchTask</title>
+    <title>punchTask | Todo lists for all </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Landing page,Subscribe">
     <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link id="change" href="assets/css/style-responsive-red.css" rel="stylesheet">    
+    <!-- Google Web Font-->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--[if IE 7]><link rel="stylesheet" href="assets/css/font-awesome-ie7.css"><![endif]-->
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,46 +39,34 @@ mixpanel.init("e6038869f66dc117b20937fff231a676");</script><!-- end Mixpanel -->
 
   <body>
 <script>
-  mixpanel.register_once({'Home Page': 'V1'});
+  mixpanel.register_once({'Home Page': 'V2'});
 mixpanel.track("Acquisition");
 mixpanel.track_forms('#form1', 'Activation');
 mixpanel.track_links('#sliding_share a', 'Referral');
-</script>    
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">punchTask</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="http://labs.punchdev.com/?p=4">About</a></li>
-              <li><a href="mailto:georges@punchdev.com">Contact</a></li>
-              <li><a href="http://labs.punchdev.com/">Blog</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>Get punchTask, and simplify your life in 30 seconds. </h1>
-        <p>You work hard, we get it. Stop using complicated todo apps and start living your life: with punchTask you get what you need, when you need it.</p>
-
+</script>   
+	<div class="container">
+      <div class="row" id="header">
+      	<div class="span12">
+       	 <h1><a href="#"><span id="it">punch</i></span><span id="beta">Task</span></a></h1>
+        </div><!--end span12-->        
+      </div><!--end row-->
+      
+      <div class="row" id="catchycontent">
+      	<div class="span12">
+        <h2>Stay tuned, we are launching very soon... </h2>        
+        <p>You work hard, we get it. Stop using complicated todo apps and start living your life: with punchTask you get what you need, when you need it. Leave us your email below, and we'll notify you the minute we open the doors. </p>        
+        </div><!--end span12-->            
+      </div><!--end row-->
+      
+      <div class="row" id="subscribe">
+      
+      	<div id="mc_embed_signup">
         <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://punchdev.wufoo.com/forms/z7x3x5/#public">
           <div>
             <div class="controls">
               <div class="input-append">
-                <input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="field text medium" placeholder="email@example.com" maxlength="255" size="16" tabindex="1" /> 
-                <input class="btn btn-primary" type="submit" value="Sign up now &raquo;" />
+                <input id="appendedInputButton" name="Field1" type="email" spellcheck="false" class="span4 input-large email" placeholder="email@example.com" required/> 
+                <input class="btn btn-primary btn-large" type="submit" value="Subscribe &raquo;" />
               </div>
             </div>
           </div>
@@ -88,39 +75,38 @@ mixpanel.track_links('#sliding_share a', 'Referral');
           <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
           <input type="hidden" id="idstamp" name="idstamp" value="DkAo+0ua14FoOpKSj43aX4UUgirszc9Yyw1HOWuab1g=" />
         </form> 
-      </div>
-
-      <div id="modal">
-                                <div rel="CI95HM35" class="lrdiscoverwidget" data-logo="off" data-background="off" data-share-url="punchtask.com" data-css=""></div>
-                                <script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
-                        </div>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>Available everywhere!</h2>
-          <p>With most task management software out there, you are stuck using their app on one platform and that's most certainly not how the world works! With punchTask, how you add tasks is up to you!</p>
         </div>
-        <div class="span4">
-          <h2>Simple, yet powerful</h2>
-          <p>Making simple software is a personal goal at punchDev, but one thing is sure: simple doesn't mean dumb. Task management should be easy to use, simple to read, yet powerful enough to be there when you need it. </p>
-       </div>
-        <div class="span4">
-          <h2>Get things done, at your pace!</h2>
-          <p>punchTask never messes around with your routine; wake up in the morning, check your email, check your phone, and never worry: punchTask is right there with you via web, text, and email. </p>
+      </div><!--end row-->
+      
+      <div class="row" id="features">
+      	<div class="span3 divider">
+        	<div class="featureicon"><i class="icon-envelope"></i></div>
+            <h3>Available Everywhere</h3>
+            <p>With punchTask, how you access your tasks is up to you: e-mail, SMS, or web.</p>
+        </div>        
+        <div class="span3 divider">
+        	<div class="featureicon"><i class="icon-thumbs-up"></i></div>
+            <h3>Simple and Powerful</h3>
+            <p>Task management should be easy to use: simple to read, yet powerful enough to be there when you need it.</p>
+        </div>       
+        <div class="span3 divider">
+        	<div class="featureicon"><i class="icon-check"></i></div>
+            <h3>Get Things Done</h3>
+            <p>Wake up in the morning, check your email, check your phone, and punchTask will guide you through the day. </p>
         </div>
-      </div>
-
-      <hr>
-
-      <footer>
-      <p>
+         <div class="span3">
+        	<div class="featureicon"><i class="icon-retweet"></i></div>
+            <h3>Stay Accountable</h3>
+            <p>With list sharing, you can now use peer pressure to make sure that you keep on track with your schedule! Share with your co-workers or your entire social network, it's your choice.</p>
+        </div>
+      </div><!--end row-->
+      
+      <div class="row" id="footer">
+      <h4>For more details leading up to our launch <br/>follow us on twitter</h4>
+      <div class="footericon"><a href="https://twitter.com/punchdev"><i class="icon-twitter-sign"></i></a></div>
       &copy; 2012. Brought to you from South Florida with love by <a href="http://punchdev.com">punchDev</a>. 
       <div class="span2 offset10"><a href="http://mixpanel.com/f/partner"><img src="http://mixpanel.com/site_media/images/partner/badge_blue.png" alt="Real Time Web Analytics" /></a></div>
-      </p>
-      </footer>
-
-    </div> <!-- /container -->
+      </div><!--end row-->      
     <!--- Sliding share box -->
 <div id="sliding_share">
         <div class="button" title="Click to share">Share</div>
@@ -135,26 +121,11 @@ mixpanel.track_links('#sliding_share a', 'Referral');
                 </ul>
         </div>
 </div>
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/bootstrap-scrollspy.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/bootstrap-tooltip.js"></script>
-    <script src="assets/js/bootstrap-popover.js"></script>
-    <script src="assets/js/bootstrap-button.js"></script>
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-carousel.js"></script>
+      </div><!--end container-->     
+      <script type="text/javascript" src="assets/js/jquery.js"></script>
+      <script type="text/javascript" src="assets/js/respond.js"></script>
     <script src="assets/js/jquery-apper.js"></script>
-    
     <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
-
   </body>
 </html>
