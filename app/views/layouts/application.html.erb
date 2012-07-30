@@ -5,10 +5,58 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+    <!-- Google Web Font-->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--[if IE 7]><link rel="stylesheet" href="assets/css/font-awesome-ie7.css"><![endif]-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/apple-touch-icon-57-precomposed.png">
+
+
+<!-- start Mixpanel --><script type="text/javascript">(function(c,a){var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=
+a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1;window.mixpanel=a})(document,window.mixpanel||[]);
+mixpanel.init("e6038869f66dc117b20937fff231a676");</script><!-- end Mixpanel -->
 </head>
-<body>
-test
-<%= yield %>
+    
+  </head>
+
+  <body>
+<script>
+  mixpanel.register_once({'Home Page': 'V2'});
+mixpanel.track("Acquisition");
+mixpanel.track_forms('#form1', 'Activation');
+mixpanel.track_links('#sliding_share a', 'Referral');
+</script>
+
+<%= yield %>      
+
+    <!--- Sliding share box -->
+<div id="sliding_share">
+        <div class="button" title="Click to share">Share</div>
+        <div class="container">
+                <ul>
+                        <li><a href="https://twitter.com/intent/tweet?text=Tasking%20done%20right!&url=https%3A%2F%2Fpunchtask.com%2F&via=punchdev" target="_blank" class="fader" title="Share on Twitter"><img src="assets/right_sharing-twitter.png" alt="Twitter" /></a></li>
+                        <li><a rel="nofollow" href="http://www.facebook.com/share.php?u=http://punchtask.com/"  target="_blank" class="fader" title="Share on Facebook"><img src="assets/right_sharing-fb.png" alt="Facebook" /></a></li>
+                        <li><a href="http://digg.com/submit?url=http%3A//punchtask.com&title=Tasking%20done%20right!" target="_blank" class="fader" title="Share on Digg"><img src="assets/right_sharing-digg.png" alt="Digg" /></a></li>
+                        <li><a href="http://www.reddit.com/submit?title=Tasking%20done%20right!&url=http%3A//punchtask.com" target="_blank" class="fader" title="Share on Reddit"><img src="assets/right_sharing-reddit.png" alt="Reddit" /></a></li>
+                        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//punchtask.com&title=Tasking%20done%20right!" target="_blank" class="fader" title="Share on LinkedIn"><img src="assets/right_sharing-in.png" alt="LinkedIn" /></a></li>
+                        <li><a href="mailto:?subject=The future of todo lists!&amp;body=Check out this site http://punchtask.com." class="fader" title="Share by email"><img src="assets/right_sharing-email.png" alt="Email" /></a></li>
+                </ul>
+        </div>
+</div>
+      </div><!--end container-->     
+    <script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+  </body>
+</html>
 
 </body>
 </html>
