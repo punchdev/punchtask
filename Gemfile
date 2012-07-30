@@ -8,6 +8,10 @@ gem 'rails', '3.2.7'
 gem 'pg'
 gem 'sqlite3'
 
+# Starting gems
+gem "high_voltage"
+gem "clearance"
+
 
 # Gems used only for assets and not required
 # in production environments by default.
