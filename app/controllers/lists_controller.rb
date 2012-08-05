@@ -53,6 +53,16 @@ class ListsController < ApplicationController
     end
   end
 
+  def complete
+    @list = List.find(params[:id])
+    @list.complete = 'true'
+    @list.save
+
+    respond_to do|format|
+      format.html { redirect_to lists_path, notice: 'Item was successfully completed.' }
+    end
+  end
+
   # PUT /lists/1
   # PUT /lists/1.json
   def update

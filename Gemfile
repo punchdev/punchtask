@@ -14,6 +14,9 @@ gem "clearance"
 # Paranoia - Never really delete (for todo completion)
 gem 'paranoia'
 
+# Count by day
+gem 'sql_funk'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

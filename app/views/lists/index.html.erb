@@ -1,24 +1,66 @@
-<h1>Listing lists</h1>
+<h1>Get to work!</h1>
+<br />
 
 <table>
   <tr>
-    <th>Content </th>
-    <th>Type</th>
-    <th></th>
+    <th>Week Tasks </th>
     <th></th>
     <th></th>
   </tr>
 
 <% @lists.each do |list| %>
+  <% if list.week %>
   <tr>
     <td><%= list.content %></td>
-    <td><%= list.week %></td>
-    <td><%= link_to raw('<i class="icon-ok"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put, data: { confirm: 'Are you sure?' } %></td>
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+  <% end %>
 <% end %>
 </table>
 
+<br />
+
+<table>
+  <tr>
+    <th>Day Tasks </th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lists.each do |list| %>
+  <% unless list.complete? %>
+    <% unless list.week? %>
+  <tr>
+    <td><%= list.content %></td>
+    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<table>
+  <tr>
+    <th>Completed Tasks </th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @lists.each do |list| %>
+  <% if list.complete? %>
+  <tr>
+    <td><del><%= list.content %></td></del>
+    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+
+<br />
 <br />
 
 <%= link_to 'New List', new_list_path %>
