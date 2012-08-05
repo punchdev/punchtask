@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805190346) do
+ActiveRecord::Schema.define(:version => 20120805192120) do
 
   create_table "lists", :force => true do |t|
     t.integer  "user_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20120805190346) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.boolean  "week"
+    t.datetime "deleted_at"
   end
 
   create_table "users", :force => true do |t|
