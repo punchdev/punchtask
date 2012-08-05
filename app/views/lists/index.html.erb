@@ -1,3 +1,35 @@
+<div class="container">
+  <div class="offset3">
+<%= form_for(@list) do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+  <div class="field">
+    Todo: <%= f.text_field :content %>
+    Week: <%= f.check_box :week %>
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+  <div class="row">
+    <% if @lists.blank? %>
+      <blockquote>
+        <p>Efficiency is doing things right; effectiveness is doing the right things.</p>
+        <small>Peter Drucker</small>
+      </blockquote>
+    <% else %>
 <h1>Get to work!</h1>
 <br />
 
@@ -64,3 +96,6 @@
 <br />
 
 <%= link_to 'New List', new_list_path %>
+</div>
+</div>
+<% end %>

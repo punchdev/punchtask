@@ -1,8 +1,10 @@
 class ListsController < ApplicationController
+  before_filter :authorize
   # GET /lists
   # GET /lists.json
   def index
     @lists = current_user.lists.order("week DESC")
+    @list = List.new
 
     respond_to do |format|
       format.html # index.html.erb

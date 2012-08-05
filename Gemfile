@@ -15,7 +15,7 @@ gem "clearance"
 gem 'paranoia'
 
 # Count by day
-gem 'sql_funk'
+gem 'sql_funk', :git => "git://github.com/3zcurdia/sql_funk.git"
 
 
 # Gems used only for assets and not required
