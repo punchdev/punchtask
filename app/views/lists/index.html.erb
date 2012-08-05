@@ -1,6 +1,5 @@
 <br />
 <br />
-<div class="container">
   <div class="offset3">
     <%= form_for(@list, :html => { :class => "well form-inline span6" }) do |f| %>
   <% if @list.errors.any? %>
@@ -17,9 +16,9 @@
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="input-append">
-    Todo: <%= f.text_field :content, :id => "appendedInputButtons"  %>
-    <%= f.submit :class => "btn", :type => "button" %>
-    Week: <%= f.check_box :week %>
+    <%= f.text_field :content, :id => "appendedInputButtons"  %>
+    <%= f.submit 'Add', :class => "btn"%><br />
+    Is this a week-long task? <%= f.check_box :week %>
   </div>
 <% end %>
 </div>

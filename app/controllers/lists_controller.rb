@@ -49,7 +49,7 @@ class ListsController < ApplicationController
         format.html { redirect_to lists_path, notice: 'List was successfully created.' }
         format.json { render json: @list, status: :created, location: @list }
       else
-        format.html { render action: "new" }
+        format.html { render action: "index" }
         format.json { render json: @list.errors, status: :unprocessable_entity }
       end
     end
