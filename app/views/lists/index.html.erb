@@ -1,6 +1,8 @@
+<br />
+<br />
 <div class="container">
   <div class="offset3">
-<%= form_for(@list) do |f| %>
+    <%= form_for(@list, :html => { :class => "well form-inline span6" }) do |f| %>
   <% if @list.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
@@ -13,24 +15,25 @@
     </div>
   <% end %>
 
-  <div class="field">
     <%= f.hidden_field :user_id, :value => current_user.id %>
-  </div>
-  <div class="field">
-    Todo: <%= f.text_field :content %>
+  <div class="input-append">
+    Todo: <%= f.text_field :content, :id => "appendedInputButtons"  %>
+    <%= f.submit :class => "btn", :type => "button" %>
     Week: <%= f.check_box :week %>
-    <%= f.submit %>
   </div>
 <% end %>
 </div>
-  <div class="row">
+<br />
+<br />
+<br />
+<br />
+  <div class="offset3">
     <% if @lists.blank? %>
       <blockquote>
         <p>Efficiency is doing things right; effectiveness is doing the right things.</p>
         <small>Peter Drucker</small>
       </blockquote>
     <% else %>
-<h1>Get to work!</h1>
 <br />
 
 <table>
