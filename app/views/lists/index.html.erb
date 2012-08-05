@@ -2,8 +2,7 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Content</th>
+    <th>Content </th>
     <th>Type</th>
     <th></th>
     <th></th>
@@ -12,12 +11,10 @@
 
 <% @lists.each do |list| %>
   <tr>
-    <td><%= list.user_id %></td>
     <td><%= list.content %></td>
-    <td><%= list.type %></td>
-    <td><%= link_to 'Show', list %></td>
-    <td><%= link_to 'Edit', edit_list_path(list) %></td>
-    <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= list.week %></td>
+    <td><%= link_to raw('<i class="icon-ok"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

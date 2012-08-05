@@ -11,6 +11,9 @@ gem 'pg'
 gem "high_voltage"
 gem "clearance"
 
+# Paranoia - Never really delete (for todo completion)
+gem 'paranoia'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
