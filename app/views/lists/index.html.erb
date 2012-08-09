@@ -44,6 +44,7 @@
   </tr>
 
 <% @lists.each do |list| %>
+  <% unless list.complete? %>
   <% if list.week %>
   <tr>
     <td><%= list.content %></td>
@@ -51,6 +52,7 @@
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   <% end %>
+<% end %>
 <% end %>
 </table>
 
@@ -88,8 +90,6 @@
   <% if list.complete? %>
   <tr>
     <td><del><%= list.content %></td></del>
-    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put, data: { confirm: 'Are you sure?' } %></td>
-    <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   <% end %>
 <% end %>
