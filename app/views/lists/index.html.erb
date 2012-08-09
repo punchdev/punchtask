@@ -38,29 +38,29 @@
 
 <table>
   <tr>
-    <th>Week Tasks </th>
     <th></th>
     <th></th>
+    <th></th>
+    <th>Tasks</th>
   </tr>
 
 <% @lists.each do |list| %>
   <% unless list.complete? %>
   <% if list.week %>
   <tr>
-    <td><%= list.content %></td>
-    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td></td>
+    <td><%= list.content %></td>
   </tr>
   <% end %>
 <% end %>
 <% end %>
 </table>
 
-<br />
-
 <table>
   <tr>
-    <th>Day Tasks </th>
+    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -69,20 +69,19 @@
   <% unless list.complete? %>
     <% unless list.week? %>
   <tr>
-    <td><%= list.content %></td>
-    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td></td>
+    <td><%= list.content %></td>
   </tr>
 <% end %>
 <% end %>
 <% end %>
 </table>
 
-<br />
-
 <table>
   <tr>
-    <th>Completed Tasks </th>
+    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -90,6 +89,9 @@
   <% unless list.updated_at <= Time.now.beginning_of_day %>
   <% if list.complete? %>
   <tr>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
     <td><del><%= list.content %></td></del>
   </tr>
   <% end %>
@@ -100,7 +102,6 @@
 <br />
 <br />
 
-<%= link_to 'New List', new_list_path %>
 </div>
 </div>
 <% end %>
