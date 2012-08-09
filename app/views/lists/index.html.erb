@@ -87,11 +87,13 @@
     <th></th>
   </tr>
 <% @lists.each do |list| %>
+  <% unless list.updated_at <= Time.now.beginning_of_day %>
   <% if list.complete? %>
   <tr>
     <td><del><%= list.content %></td></del>
   </tr>
   <% end %>
+<% end %>
 <% end %>
 </table>
 
