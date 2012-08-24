@@ -1,3 +1,18 @@
 // Place all the styles related to the Lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.week {
+  color: #5a8c81;
+}
+.today {
+  color: #f28e76;
+}
+.due {
+  color: blue;
+}
+.overdue {
+  color: #e85066;
+}
+.done {
+  color: #382837;
+}

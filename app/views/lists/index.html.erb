@@ -51,7 +51,7 @@
     <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td></td>
-    <td><%= list.content %></td>
+    <td><div class="week"><%= list.content %></div></td>
   </tr>
   <% end %>
 <% end %>
@@ -72,7 +72,14 @@
     <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td></td>
-    <td><%= list.content %></td>
+    <% if list.created_at < 1.day.ago %>
+      <% x = "due" %>
+    <% elsif list.created_at > 1.day.ago %>
+      <% x = "overdue" %>
+    <% else %>
+      <% x = "today" %>
+    <% end %>
+    <td><div class="<%= x %>"><%= list.content %></div></td>
   </tr>
 <% end %>
 <% end %>
@@ -92,7 +99,7 @@
     <td>&nbsp;&nbsp;&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td><del><%= list.content %></td></del>
+    <td><del><div class="done"><%= list.content %></div></td></del>
   </tr>
   <% end %>
 <% end %>
