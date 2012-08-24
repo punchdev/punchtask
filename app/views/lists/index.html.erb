@@ -72,11 +72,11 @@
     <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td></td>
-    <% if list.created_at < 1.day.ago %>
+    <% if list.created_at < 1.day.ago && list.created_at > 2.days.ago%>
       <% x = "due" %>
-    <% elsif list.created_at > 1.day.ago %>
+    <% elsif list.created_at < 2.days.ago %>
       <% x = "overdue" %>
-    <% else %>
+    <% elsif list.created_at > 1.day.ago %>
       <% x = "today" %>
     <% end %>
     <td><div class="<%= x %>"><%= list.content %></div></td>
