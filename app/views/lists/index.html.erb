@@ -49,6 +49,7 @@
   <% if list.week %>
   <tr>
     <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
+    &nbsp;
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td></td>
     <td><div class="week"><%= list.content %></div></td>
@@ -70,6 +71,7 @@
     <% unless list.week? %>
   <tr>
     <td><%= link_to raw('<i class="icon-ok"></i>'), complete_list_path(list.id), method: :put %></td>
+    &nbsp;
     <td><%= link_to raw('<i class="icon-remove"></i>'), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td></td>
     <% if list.created_at < 1.day.ago && list.created_at > 2.days.ago%>
