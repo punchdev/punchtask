@@ -66,6 +66,13 @@ mixpanel.init("e6038869f66dc117b20937fff231a676");</script><!-- end Mixpanel -->
       <div class="offset3 flash <%= key %>"><%= value %></div>
     <% end -%>
 
+  <% if signed_in? %>
+    <% if current_user.created_at > 1.week.ago %>
+      <% message = nil %>
+      <div class="offset3 flash tips"><%= mesage unless message.blank? %></div>
+    <% end %>
+  <% end %>
+
     <%= yield %>      
 
     <!--- Sliding share box -->

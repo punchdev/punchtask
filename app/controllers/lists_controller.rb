@@ -5,6 +5,7 @@ class ListsController < ApplicationController
   def index
     @lists = current_user.lists.order("week DESC")
     @list = List.new
+    @message = "All completed todos will be archived once the day is over so you won't have to worry about them!"
 
     respond_to do |format|
       format.html # index.html.erb
