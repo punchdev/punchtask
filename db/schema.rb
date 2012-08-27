@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805193112) do
+ActiveRecord::Schema.define(:version => 20120827102810) do
 
   create_table "lists", :force => true do |t|
     t.integer  "user_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20120805193112) do
     t.string   "remember_token",     :limit => 128
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
+    t.integer  "plan_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
