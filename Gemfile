@@ -17,6 +17,9 @@ gem 'paranoia'
 # Count by day
 gem 'sql_funk', :git => "git://github.com/3zcurdia/sql_funk.git"
 
+# Stripe (payment gem)
+gem 'stripe'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
